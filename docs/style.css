@@ -1,0 +1,109 @@
+body,h1,p{
+    margin: 0;
+    padding: 0;
+}
+
+.article a{
+    color: #3366cc;
+    text-decoration: none;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+}
+
+.logo img{
+    padding-left: 16px;
+    max-height: 100px;
+}
+
+.search-box input{
+    padding: 5px;
+    border: 1px solid blue;
+}
+
+.search-box button{
+    background-color: #007bff;
+    color: white;
+    border: 1px solid blue;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.user-links a {
+    color: blue;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.main-content{
+    display: flex;
+}
+
+.left-sidebar{
+    flex: 1;
+    padding: 20px;
+    color: #3366cc;
+}
+
+.accordian{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.accordion-item-summary{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.accordian-item-content{
+    padding: 10px;
+}
+
+.right-content{
+    flex:4;
+    padding: 20px;
+}
+
+.article{
+    flex: 1;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.article-content{
+    flex:3;
+    padding-right: 16px;
+}
+
+.article-image{
+    flex: 1;
+    text-align: center;
+}
+.fact-sheet{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.fact-sheet h3{
+    flex: 1;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+}
+
+.fact-sheet ul{
+
+}
