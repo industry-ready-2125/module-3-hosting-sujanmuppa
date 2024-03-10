@@ -5,58 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wikipidia</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .left-sidebar ul li.active {
+            font-weight: bold;
+            color: blue; /* Change the color as desired */
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="logo.jpg" alt="wikipidia" height="100px" width="350px">
+            <img src="logo.png" alt="wikipidia" height="200px" width="200px">
         </div>
         <div class="search-box">
-            <input type="text" class="txt" placeholder="🔍 Search Wikipidia">
+            <input type="text" class="txt" placeholder="🔍 Search SujanWiki">
             <button type="button">Search</button>
         </div>
         <div class="user-links">
-            <a href="#">Create Account</a>
-            <a href="#">Log In</a>
+            <a href="page1.html">📧 Create Account</a>
+            <a href="page2.html">🧧 Login </a>
         </div>
     </header>
     <div class="main-content">
-        <aside class="left-sidebar">
+        <aside class="left-sidebar" style="position: fixed; width: 300px;">
             <div class="accordion">
                 <details class="accordion-item" open="">
-                    <summary class="accordion-item-summary">Introduction</summary>
+                    <summary class="accordion-item-summary">Contents</summary>
                     <div class="accordion-item-content">
-                        <ul>
-                            <li>Definition</li>
-                            <li>Purpose</li>
-                            <li>History</li>
-                        </ul>
-                    </div>
-                </details>
-                <details class="accordion-item" open="">
-                    <summary class="accordion-item-summary">Introduction</summary>
-                    <div class="accordion-item-content">
-                        <ul>
-                            <li>Content 1</li>
-                            <li>Content 2</li>
-                            <li>Content 3</li>
-                        </ul>
-                    </div>
-                </details>
-                <details class="accordion-item" open="">
-                    <summary class="accordion-item-summary">Introduction</summary>
-                    <div class="accordion-item-content">
-                        <ul>
-                            <li>Content 1</li>
-                            <li>Content 2</li>
-                            <li>Content 3</li>
+                        <ul id="sidebar-list">
+                            <li id="welcome-li">Welcome to Wikipedia</li>
+                            <li id="benefits-li">Benefits of Wikipedia</li>
+                            <li id="how-to-li">How to Use Wikipedia Effectively</li>
+                            <li id="contributing-li">Contributing to Wikipedia</li>
+                            <li id="impact-li">Wikipedia's Impact</li>
+                            <li id="future-li">Future of Wikipedia</li>
                         </ul>
                     </div>
                 </details>
             </div>
         </aside>
-        <div class="right-content">
-            <h1>Welcome to Wikipedia</h1>
+        <div class="right-con</div>tent" style="margin-left: 320px;">
+            <h1 id="welcome" class="heading">Welcome to Wikipedia</h1>
             <p>Wikipedia is a free online encyclopedia that can be edited by anyone. It contains articles on a wide range of topics, providing information and references for research and general knowledge.</p>
 
             <p>The purpose of Wikipedia is to create a collaborative platform where users can contribute their knowledge and expertise to create and improve articles. It aims to provide accurate and reliable information to its readers.</p>
@@ -65,7 +54,7 @@
 
             <p>With millions of articles in multiple languages, Wikipedia covers a vast array of subjects, including history, science, technology, arts, and more. It is constantly updated and expanded by a global community of volunteers.</p>
 
-            <h2>Benefits of Wikipedia</h2>
+            <h2 id="benefits" class="heading">Benefits of Wikipedia</h2>
             <p>Wikipedia offers several benefits to its users:</p>
             <ul>
                 <li>Access to a vast amount of information on various topics</li>
@@ -75,7 +64,7 @@
                 <li>Constantly updated content to reflect the latest developments and discoveries</li>
             </ul>
 
-            <h2>How to Use Wikipedia Effectively</h2>
+            <h3 id="how-to" class="heading">How to Use Wikipedia Effectively</h3>
             <p>To make the most out of Wikipedia, consider the following tips:</p>
             <ol>
                 <li>Verify information by cross-referencing with other reliable sources</li>
@@ -85,13 +74,13 @@
                 <li>Respect the community guidelines and policies when editing or discussing articles</li>
             </ol>
 
-            <h3>Contributing to Wikipedia</h3>
+            <h3 id="contributing" class="heading">Contributing to Wikipedia</h3>
             <p>Wikipedia relies on the contributions of its users to maintain and improve its content. If you have knowledge or expertise in a particular subject, consider contributing to Wikipedia by creating or editing articles. By sharing your knowledge, you can help make Wikipedia a more comprehensive and reliable resource for everyone.</p>
 
-            <h3>Wikipedia's Impact</h3>
+            <h3 id="impact" class="heading">Wikipedia's Impact</h3>
             <p>Since its inception, Wikipedia has had a significant impact on the way people access and consume information. It has democratized knowledge, allowing anyone with an internet connection to access a wealth of information on various topics. Wikipedia's open editing model has also sparked debates and discussions on the reliability and accuracy of information, leading to ongoing efforts to ensure the quality of its content.</p>
 
-            <h3>Future of Wikipedia</h3>
+            <h3 id="future" class="heading">Future of Wikipedia</h3>
             <p>As technology and the internet continue to evolve, so does Wikipedia. The platform is constantly adapting to new trends and challenges, such as combating misinformation and improving accessibility. With the support of its dedicated community of volunteers, Wikipedia will continue to grow and serve as a valuable resource for generations to come.</p>
 
             
@@ -99,21 +88,61 @@
         <div class="article">
             <div class="article-img">
                 <div class="fact-sheet">
-                    <h3>Welcome to Wiki</h3>
+                    <h3>This is sujan</h3>
                     <img src="image1.jpg" alt="image 1" width="200px" height="200px">
                     <h3>Facts about wikipidia</h3>
                     <ul>
-                        <li class="fact-group">Wikipedia is a free online encyclopedia that can be edited by anyone.</li>
-                        <li class="fact-group">It contains articles on a wide range of topics, providing information and references for research and general knowledge.</li>
-                        <li class="fact-group">The purpose of Wikipedia is to create a collaborative platform where users can contribute their knowledge and expertise to create and improve articles.</li>
-                        <li class="fact-group">Wikipedia was launched on January 15, 2001, by Jimmy Wales and Larry Sanger.</li>
-                        <li class="fact-group">With millions of articles in multiple languages, Wikipedia covers a vast array of subjects, including history, science, technology, arts, and more.</li>
+                        <li><a href="#welcome">Welcome to Wikipedia</a></li>
+                        <li><a href="#benefits">Benefits of Wikipedia</a></li>
+                        <li><a href="#how-to">How to Use Wikipedia Effectively</a></li>
+                        <li><a href="#contributing">Contributing to Wikipedia</a></li>
+                        <li><a href="#impact">Wikipedia's Impact</a></li>
+                        <li><a href="#future">Future of Wikipedia</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    
 
-        </body>
-        </html>
+    <script>
+        let lastHeading = '';
+
+        // Function to log the last encountered heading ID when scrolling
+        function logLastHeading() {
+            const headings = document.querySelectorAll('.heading');
+
+            headings.forEach((heading) => {
+                const bounding = heading.getBoundingClientRect();
+                if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+                    if (lastHeading !== heading.id) {
+                        lastHeading = heading.id;
+                        console.log('Last heading:', lastHeading);
+                        highlightSidebarItem(lastHeading);
+                    }
+                }
+            });
+        }
+
+        // Function to highlight the corresponding list item in the left sidebar
+        function highlightSidebarItem(id) {
+            const sidebarList = document.getElementById('sidebar-list');
+            const listItems = sidebarList.getElementsByTagName('li');
+
+            // Remove active class from all list items
+            for (let i = 0; i < listItems.length; i++) {
+                listItems[i].classList.remove('active');
+            }
+
+            // Add active class to the corresponding list item
+            const listItem = document.getElementById(`${id}-li`);
+            if (listItem) {
+                listItem.classList.add('active');
+            }
+        }
+
+        // Call the function when the page loads and on scroll
+        document.addEventListener('DOMContentLoaded', logLastHeading);
+        window.addEventListener('scroll', logLastHeading);
+    </script>  
+</body>
+</html>
