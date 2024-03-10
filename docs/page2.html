@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipidia</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .left-sidebar ul li.active {
+            font-weight: bold;
+            color: blue; /* Change the color as desired */
+        }
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Show the dropdown content when the dropdown button is clicked */
+        .show {
+            display: block;
+        }
+        /* Custom CSS for the submit button */
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header style="width: 90%;">
+        <div class="header" style="width: 100%;">
+            <div class="navbar" style="display: flex; justify-content:space-between; width: 100%;">
+                <div class="navbar-left" style="display: flex; align-items: center; width: 100%;" >
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="toggleDropdown()">☰</button>
+                        <div class="dropdown-content" id="dropdownContent">
+                            <a href="#welcome">Username</a><br>
+                            <a href="#benefits">Password</a><br>
+                            <a href="#how-to">Email (recomended)</a><br>
+                            <a href="#contributing">recaptcha</a><br>
+                            <a href="#impact">submit</a><br>
+                        </div>
+                    </div>
+                    <div class="logo" style="margin:10px;">
+                        <img src="logo.png" alt="wikipidia" height="200px" width="200px">
+                    </div>
+                    <div class="search-box">
+                        <input type="text" class="txt" placeholder="🔍 Search SujanWiki">
+                        <button type="button">Search</button>
+                    </div>
+                    <div class="user-links" style="margin-left: 28rem;">
+                        <a href="page1.html">📧 Create Account</a>
+                        <a href="page2.html">🧧 Login </a>
+                    </div>
+            </div>         
+        </div>
+        <!-- <div class="user-links">
+            <a href="www.linkedin.com/in/sujan-muppavarupu">📧 Linkidin</a>
+            <a href="https://github.com/sujanmuppa">🧧 Github </a>
+        </div> -->
+    </header>
+    <div class="heading-name" style="padding: 20px;">
+        <h1 id="welcome" class="heading">Log in</h1>
+        <hr>
+    </div>
+    <div class="main-content">
+        <div class="right-content">
+            <h3>Username</h3><br>
+            <input type="text" name="username" id="username" placeholder="Enter your username"><br>
+            <p>Your username is public and cannot be made private later.</p> <br>
+
+            <h2 id="benefits" class="heading">Password</h2>
+            <input type="text" name="username" id="username" placeholder="Enter your password"><br>
+            <input type="checkbox" id="rememberMe">
+            <label for="rememberMe">Remember me for up to a year</label>
+
+            <div id="impact">
+                <button class="submit-button">Submit Response</button>
+            </div>
+            
+        </div>
+        <div class="article">
+            <div class="article-img">
+                <br>
+                <br>
+                <br>
+                <br><br>
+                <img src="hello.png" alt="metadata" width="500px">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.classList.toggle("show");
+        }
+
+        // Close the dropdown when the user clicks elsewhere on the HTML document
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        let lastHeading = '';
+        // Function to log the last encountered heading ID when scrolling
+        function logLastHeading() {
+            const headings = document.querySelectorAll('.heading');
+
+            headings.forEach((heading) => {
+                const bounding = heading.getBoundingClientRect();
+                if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+                    if (lastHeading !== heading.id) {
+                        lastHeading = heading.id;
+                        console.log('Last heading:', lastHeading);
+                        highlightSidebarItem(lastHeading);
+                    }
+                }
+            });
+        }
+
+        // Function to highlight the corresponding list item in the left sidebar
+        function highlightSidebarItem(id) {
+            const sidebarList = document.getElementById('sidebar-list');
+            const listItems = sidebarList.getElementsByTagName('li');
+
+            // Remove active class from all list items
+            for (let i = 0; i < listItems.length; i++) {
+                listItems[i].classList.remove('active');
+            }
+
+            // Add active class to the corresponding list item
+            const listItem = document.getElementById(`${id}-li`);
+            if (listItem) {
+                listItem.classList.add('active');
+            }
+        }
+
+        // Call the function when the page loads and on scroll
+        document.addEventListener('DOMContentLoaded', logLastHeading);
+        window.addEventListener('scroll', logLastHeading);
+    </script>  
+</body>
+</html>
